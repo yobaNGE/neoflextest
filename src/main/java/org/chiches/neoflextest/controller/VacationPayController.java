@@ -18,18 +18,16 @@ public class VacationPayController {
         this.vacationPayService = vacationPayService;
     }
 
+    //http://localhost:8080/calculate?averageSalary=100000&startDate=01.09.2024&endDate=11.09.2024
     @GetMapping("/calculate")
     public CalculateVacationPayResponse calculateVacationPay(
             @RequestParam double averageSalary,
-            @RequestParam int daysVacation,
             @RequestParam LocalDate startDate,
             @RequestParam LocalDate endDate) {
         VacationPayRequest vacationPayRequest = new VacationPayRequest(
                 averageSalary,
-                daysVacation,
                 startDate,
                 endDate);
-
         return vacationPayService.calculateVacationPay(vacationPayRequest);
     }
 }

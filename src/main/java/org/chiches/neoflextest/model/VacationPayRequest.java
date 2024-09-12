@@ -4,19 +4,13 @@ import java.time.LocalDate;
 
 public class VacationPayRequest {
     private double avarageSalary;
-    private int daysVacation;
     private LocalDate startDate;
     private LocalDate endDate;
 
-    public VacationPayRequest(double avarageSalary, int daysVacation, LocalDate startDate, LocalDate endDate) {
+    public VacationPayRequest(double avarageSalary, LocalDate startDate, LocalDate endDate) {
         this.avarageSalary = avarageSalary;
-        this.daysVacation = daysVacation;
         this.startDate = startDate;
         this.endDate = endDate;
-    }
-
-    public VacationPayRequest() {
-
     }
 
     public double getAvarageSalary() {
@@ -25,14 +19,6 @@ public class VacationPayRequest {
 
     public void setAvarageSalary(double avarageSalary) {
         this.avarageSalary = avarageSalary;
-    }
-
-    public int getDaysVacation() {
-        return daysVacation;
-    }
-
-    public void setDaysVacation(int daysVacation) {
-        this.daysVacation = daysVacation;
     }
 
     public LocalDate getStartDate() {
@@ -55,7 +41,6 @@ public class VacationPayRequest {
     public String toString() {
         return "VacationPayRequest{" +
                 "avarageSalary=" + avarageSalary +
-                ", daysVacation=" + daysVacation +
                 ", startDate=" + startDate +
                 ", endDate=" + endDate +
                 '}';
